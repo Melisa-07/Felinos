@@ -1,0 +1,412 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  user-select: none;
+  background: #e5e5e5;
+}
+
+/* DONATION BUBLE */
+.circle-container {
+  position: fixed;
+  top: 30%;
+  right: 2%;
+  /* font-size: 30px;     */
+  z-index: 999;
+  cursor: pointer;
+  color: #000;
+  background-color: #fff;
+  width: 70px;
+  height: 50px;
+  box-shadow: 0 1px 10px 0 rgba(0, 20, 20, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 70px;
+  margin: 4px;
+  transition: 0.2 transform;
+}
+.circle-container img {
+  margin-top: 10px;
+  width: 70px;
+  height: 70px;
+}
+
+/* TOOLTIP */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  & img {
+    border-radius: 50%;
+  }
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  color: #070707;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+  position: absolute;
+  z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.modo-oscuro .tooltiptext {
+  color: #f6f6f6;
+}
+/* END DONATION BUBLE */
+
+/* HAMBURGUER MENU */
+.hamburger-menu {
+  position: absolute;
+  left: 10px;
+  margin-top: 0.8rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.hamburger-menu .line {
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+/* END HAMBURGUER MENU */
+
+.modo-oscuro {
+  background-color: #1a1a1a;
+}
+.modo-oscuro .main {
+  background-color: #333;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  margin: 0.4rem 0 0 1rem;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.switch::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s, background-color 0.3s;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"]:checked+.switch {
+  background-color: #2196f3;
+}
+input[type="checkbox"]:checked+.switch::after {
+  transform: translateX(20px) translateY(-50%);
+}
+
+/* MESSAGES MENU */
+.section-overlay {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  padding: 6px 0;
+  background-color: rgba(8, 8, 8, 0.877);
+  color: #f6f6f6;
+  z-index: 999;
+  display: none;
+  /* Ocultar por defecto */
+}
+.section-overlay .menu ul {
+  display: flex;
+  padding: 0 20px;
+}
+.section-overlay .menu ul li {
+  list-style: none;
+  margin: 0 10px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+.section-overlay .menu .active {
+  border-bottom: 3px solid #fd5068;
+  padding-bottom: 2px;
+}
+.section-overlay .messages {
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  transition: 0.2s box-shadow;
+}
+.section-overlay .messages .avatar img {
+  width: 65px;
+  height: 65px;
+  border-radius: 70px;
+}
+.section-overlay .messages .user {
+  padding: 0 10px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+}
+.section-overlay .messages .text {
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 10px;
+  font-weight: 300;
+  font-size: 15px;
+  opacity: 0.8;
+}
+.section-overlay .messages:hover {
+  box-shadow: 0 0 15px 0 rgba(162, 163, 163, 0.1);
+  border-right: 5px solid #fd5068;
+}
+/* END MESSAGES MENU */
+
+.overlay-description {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  padding: 6px 0px;
+  background-color: rgba(83, 81, 81, 0.6);
+  color: #f6f6f6;
+  z-index: 999;
+  display: none;
+  /* Ocultar por defecto */
+}
+.description-text {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 500;
+  top: 60%;
+  margin: 0 5px 0 5px;
+}
+.white-bkg {
+  position: absolute;
+  background: #f6f6f6;
+  inset: 0;
+  z-index: -10;
+}
+.profile {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
+
+main {
+  background: url("./image/iphone.webp") no-repeat;
+  background-size: contain;
+  width: 320px;
+  height: 640px;
+  display: flex;
+  position: relative;
+}
+section {
+  width: 100%;
+  border-radius: 32px;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  padding: 16px 6px;
+  margin: 24px;
+}
+header {
+  display: flex;
+  justify-content: center;
+  margin: 1.7rem 0 0 3.5rem;
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  background: -webkit-linear-gradient(#eee, #333);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  padding: 0 24px;
+  justify-content: center;
+  align-items: center;
+  & button {
+    background: url("./image/tinder-icons.webp") no-repeat;
+    background-position: 0px 0px;
+    background-size: 175px;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    transition: scale 0.3s ease;
+    &:hover {
+      scale: 1.4;
+    }
+    &.is-big {
+      background-size: 250px;
+      width: 48px;
+      height: 48px;
+    }
+    &.is-undo {
+      background-position: -140px 0;
+    }
+    &.is-remove {
+      background-position: -150px 0;
+    }
+    &.is-fav {
+      background-position: -50px 0;
+    }
+    &.is-star {
+      background-position: -70px 0px;
+    }
+  }
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  &>span {
+    display: grid;
+    place-content: center;
+    color: #777;
+    font-size: 14px;
+    text-align: center;
+    height: 100%;
+    z-index: -1;
+  }
+  & #filter-icon {
+    position: absolute;
+    top: 2.5%;
+    right: 15px;
+    height: 30px;
+    z-index: 999;
+  }
+  & #formulario-filtros {
+    border-radius: 8px;
+    cursor: grab;
+    overflow: hidden;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  & article {
+    border-radius: 8px;
+    cursor: grab;
+    overflow: hidden;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    &.go-left {
+      transform: translateX(-150%) rotate(-30deg) !important;
+    }
+    &.go-right {
+      transform: translateX(150%) rotate(30deg) !important;
+    }
+    &.go-left,
+    &.go-right {
+      transition: transform 0.3s ease, rotate 0.3s ease;
+    }
+    &.reset {
+      transition: transform 0.3s ease;
+      transform: translateX(0) !important;
+    }
+    & .choice {
+      border-radius: 8px;
+      color: black;
+      border: 4px solid;
+      z-index: 9999;
+      position: absolute;
+      top: 32px;
+      right: 16px;
+      opacity: 0;
+      padding: 4px 8px;
+      font-size: 24px;
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      width: fit-content;
+      &.nope {
+        border-color: #ff6e63;
+        color: #ff6e63;
+        transform: rotate(30deg);
+      }
+      &.like {
+        border-color: #63ff68;
+        color: #63ff68;
+        left: 16px;
+        transform: rotate(-30deg);
+      }
+    }
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(0.7px);
+    }
+    & h2 {
+      color: white;
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
+      width: 100%;
+      padding: 16px;
+      z-index: 3;
+      background: linear-gradient(to top, #00000088 20%, transparent 40%);
+    }
+    & span {
+      margin-left: 6px;
+      font-size: 18px;
+      line-height: 1.4;
+      font-weight: 400;
+    }
+    & .arrow-down {
+      position: absolute;
+      top: 90%;
+      right: 15px;
+      height: 30px;
+      z-index: 9999;
+    }
+  }
+}
