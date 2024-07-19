@@ -83,7 +83,6 @@ async function mostrarImagenes() {
       console.error('Error al cargar las imágenes:', error);
   }
 }
-document.addEventListener("DOMContentLoaded", mostrarImagenes);
 
 function mostrarDescripcion(descripcion) {
   var descripcionOverlay = document.querySelector('.overlay-description');
