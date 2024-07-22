@@ -18,7 +18,7 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-$sql = "SELECT nombre, edad, descripcion, imagen FROM felinos";
+$sql = "SELECT nombre, edad, descripcion, imagen FROM gatos";
 $result = mysqli_query($conn, $sql);
 
 $gatos = array();
@@ -29,7 +29,7 @@ if ($result->num_rows > 0) {
 }
 
 header('Content-Type: application/json');
-echo json_encode($felinos);
+echo json_encode($gatos);
 
 $conn->close();
 ?>

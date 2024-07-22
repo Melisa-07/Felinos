@@ -13,7 +13,7 @@ if ($conn->connect_error) {
   die("Conexión fallida: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM felinos";
+$sql = "SELECT * FROM gatos";
 $result = mysqli_query($conn, $sql);
 
 ?>
