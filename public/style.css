@@ -226,7 +226,7 @@ input[type="checkbox"]:checked+.switch::after {
 }
 
 main {
-  background: url("./image/iphone.webp") no-repeat;
+  background: url("/felinos/image/iphone.webp") no-repeat;
   background-size: contain;
   width: 320px;
   height: 640px;
@@ -263,7 +263,7 @@ footer {
   justify-content: center;
   align-items: center;
   & button {
-    background: url("./image/tinder-icons.webp") no-repeat;
+    background: url("/felinos/image/tinder-icons.webp") no-repeat;
     background-position: 0px 0px;
     background-size: 175px;
     height: 36px;

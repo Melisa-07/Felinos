@@ -58,7 +58,7 @@ async function mostrarImagenes() {
           var arrowDown = document.createElement('div');
 
           arrowDown.classList.add('arrow-down');
-          arrowDown.innerHTML = '<img src="./image/circle-arrow.png" alt="Flecha hacia abajo">';
+          arrowDown.innerHTML = '<img src="/felinos/image/circle-arrow.png" alt="Flecha hacia abajo">';
           arrowDown.onclick = () => mostrarDescripcion(gato.descripcion);
 
           img.src = gato.imagen;

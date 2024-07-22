@@ -22,7 +22,7 @@ $result = mysqli_query($conn, $sql);
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Elegi la mascota ideal y ayudanos adoptando o transitando. Colabora en Mercado Pago para apoyar al hogar de Felinos callejeros Rosario." />
-  <link rel="stylesheet" href="./style.css" async />
+  <link rel="stylesheet" href="/felinos/public/style.css" async />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap"
@@ -36,7 +36,7 @@ $result = mysqli_query($conn, $sql);
     <div class="tooltip">
       <a href="https://link.mercadopago.com.ar/hogardegatosros?fbclid=PAAab2ZMsIKtldoL8gKPDeLwIRBZtNk1tm2LMRUWBIWxaXIOX7XElito1RPbs"
         target="_blank">
-        <img src="./image/mercado-pago.webp" alt="" />
+        <img src="../image/mercado-pago.webp" alt="" />
       </a>
       <span class="tooltiptext">Mercado Pago</span>
     </div>
@@ -66,7 +66,7 @@ $result = mysqli_query($conn, $sql);
             </div>
             <div class="messages">
               <div class="avatar">
-                <img src="./image/pinito-elmalcriado.webp" alt="pinito, el gato malcriado" />
+                <img src="../image/pinito-elmalcriado.webp" alt="pinito, el gato malcriado" />
               </div>
               <div class="message">
                 <div class="user">Pinito</div>
@@ -75,7 +75,7 @@ $result = mysqli_query($conn, $sql);
             </div>
             <div class="messages">
               <div class="avatar">
-                <img src="./image/felinos-logo.webp" alt="logo de Felinos callejeros" />
+                <img src="../image/felinos-logo.webp" alt="logo de Felinos callejeros" />
               </div>
               <div class="message">
                 <div class="user">Felinos Callejeros</div>
@@ -87,7 +87,7 @@ $result = mysqli_query($conn, $sql);
             </div>
             <div class="messages">
               <div class="avatar">
-                <img src="./image/felino-adoptado.webp" alt="felino adoptado" />
+                <img src="../image/felino-adoptado.webp" alt="felino adoptado" />
               </div>
               <div class="message">
                 <div class="user">Hola!</div>
@@ -117,7 +117,7 @@ $result = mysqli_query($conn, $sql);
       </section>
     </main>
   </div>
-  <script src="./script.js" defer></script>
+  <script src="/felinos/public/script.js" defer></script>
 </body>
 
 </html>

@@ -1,0 +1,16 @@
+{
+    "builds": [
+      {
+        "src": "public/**/*",
+        "use": "railway/static-build",
+        "config": {
+          "distDir": "public"
+        }
+      },
+      {
+        "src": "api/**/*",
+        "use": "railway/php"
+      }
+    ]
+  }
+  
